@@ -1,8 +1,11 @@
 import ItemCard from "@/components/item-card";
-import { ItemType, allItems } from "@/data";
-import { ArrowUpRight } from "lucide-react";
-import Link from "next/link";
-import React from "react";
+import { ItemType, allItems, itemType } from "@/data";
+
+export async function generateStaticParams() {
+  return itemType.map((id) => ({
+    id,
+  }));
+}
 
 export default function page({ params: { id } }: { params: { id: ItemType } }) {
   const currentItems = allItems[id] || [];
