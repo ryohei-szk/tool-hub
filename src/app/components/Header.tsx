@@ -1,5 +1,7 @@
 import React from "react";
 import MobileNav from "./mobile-nav";
+import Search from "./search";
+import { AppConfig } from "@/app.config";
 
 export default function Header() {
   return (
@@ -8,7 +10,8 @@ export default function Header() {
         <div className="lg:hidden">
           <MobileNav />
         </div>
-        <p className="font-bold text-lg">ToolHub</p>
+        <p className="font-bold text-lg">{AppConfig.title}</p>
+        <Search />
       </div>
     </header>
   );

@@ -1,16 +1,7 @@
-import { Tag } from "@/types/tag";
+import { allTags } from "@/data/tag";
 
-export const TAGS: Tag[] = [
-  {
-    label: "イラスト",
-    id: "illusts",
-  },
-  {
-    label: "写真",
-    id: "photos",
-  },
-  {
-    label: "アイコン",
-    id: "icons",
-  },
-];
+export const mainTags: string[] = ["illust", "photo", "icon"];
+
+export const getTagLabel = (tagId: string): string => {
+  return allTags.find((tag) => tag.id === tagId)?.label ?? "";
+};
