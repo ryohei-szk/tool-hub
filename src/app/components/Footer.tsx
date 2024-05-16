@@ -8,7 +8,7 @@ export default function Footer() {
       <div className="container h-16 flex items-center justify-between">
         <p className="text-muted-foreground">&copy; yoshihira</p>
         <ModeToggle />
-        <a href="">
+        <a href="https://github.com/yoshihira-s/tool-hub/" target="_blank">
           <SiGithub size={20} />
         </a>
       </div>
