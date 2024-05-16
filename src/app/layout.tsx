@@ -30,9 +30,13 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <Header />
+          <Suspense>
+            <Header />
+          </Suspense>
           <main className="flex flex-1">
-            <Sidebar />
+            <Suspense>
+              <Sidebar />
+            </Suspense>
             <Suspense fallback={<p>Loading feed...</p>}>
               <div className="flex-1 bg-muted/30">{children}</div>
             </Suspense>
