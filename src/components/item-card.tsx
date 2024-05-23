@@ -15,7 +15,7 @@ export default function ItemCard({
   imageUrl: string;
 }) {
   return (
-    <div className="hover:shadow-lg transition duration-500 aspect-video p-4 border relative rounded-md shadow-sm bg-card">
+    <div className="grid-rows-subgrid row-span-3 grid hover:shadow-lg transition duration-500 p-4 border relative rounded-md shadow-sm bg-card gap-0">
       <div className="aspect-video border rounded relative overflow-hidden">
         <Image src={imageUrl} fill objectFit="cover" alt="" />
       </div>
@@ -25,7 +25,7 @@ export default function ItemCard({
           <span className="absolute inset-0"></span>
         </Link>
       </h2>
-      <div className="flex relative z-10 mt-2 gap-2 flex-wrap">
+      <div className="flex relative z-10 mt-2 gap-2 flex-wrap items-start">
         {tags.map((tagId) => (
           <Link
             key={tagId}
